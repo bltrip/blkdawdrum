@@ -842,7 +842,7 @@ background: linear-gradient(90deg, rgba(100,150,300,199) 0%, rgba(158,543,195,34
 }
 #sidebar .toggle-btn {
   position: absolute;
-  Left:240px;
+  Left:340px;
   top: 8px;
 }
 #sidebar .toggle-btn span {
