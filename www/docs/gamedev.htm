@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <link rel="stylesheet" href="/css/main.css" type="text/css" />
+   <link rel="stylesheet" href="/css/search.css" type="text/css" />
+   <style>
+       pre {font-size:1.5em;}
+       .string {color:red;}
+       .comment {color:blue;}
+   </style>
+</head>
+<body>
+
+   <div class="main-title-bar">
+         <div class="main-title-bar-content">
+         <a class="main-page-link" href="/index.htm">
+         <span class="main-title-open">Open</span><span class="main-title-media">Music</span><span class="main-title-gallery">.Gallery</span>
+         </a>
+
+         <div class="main-title-bar-right">
+            <div class="title-bar-user-controls"></div>
+         </div>
+      </div>
+
+   </div>
+
+   <div class="main-body">
+
+
+<h1>Game Dev</h1>
+<hr>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TXpPFBkpXp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+<p>
+Adding music and sounds to your game is easy with OpenMusic.Gallery. Just add a few lines of code.
+</p>
+
+<h4>In your HTML:</h4>
+
+<pre>
+     &lt;script src=<span class="string">"https://openmusic.gallery/omg.js"</span>>&lt;/script>
+</pre>
+
+<h4>When the game is loading:</h4>
+
+<pre>
+     var music = new OMusicPlayer()
+     music.prepareSongFromURL(<span class="string">"http://openmusic.gallery/data/1333"</span>)
+     var laserSound = music.getSound(<span class="string">"SFX"</span>, <span class="string">"laser"</span>)
+
+</pre>
+
+<h4>When the game starts:</h4>
+
+<pre>
+     music.play()
+</pre>
+
+<h4>When the laser is fired:</h4>
+
+<pre>
+     laserSound.play()
+</pre>
+
+<h4>Increase BPM and key when difficulty increases:</h4>
+
+<pre>
+     music.beatParams.bpm += <span class="string">20</span>
+
+     music.keyParams.rootNote += <span class="string">1</span>
+     music.rescaleSong()
+</pre>
+
+<h4>When a boss character shows up:</h4>
+    
+<pre>
+    <span class="comment">// boss enters</span>
+    music.mutePart(<span class="string">"Boss"</span>, false);
+    
+    <span class="comment">// boss exits</span>
+    music.mutePart(<span class="string">"Boss"</span>, true);
+</pre>
+
+
+<h4>When the game ends:</h4>
+
+<pre>
+     music.stop()
+</pre>
+
+   </div>
+
+
+   <script src="/js/usercontrols.js"></script>
+   <script>
+   setupUserControls(document.getElementsByClassName("title-bar-user-controls")[0]);
+   </script>
+
+
+</body>
+</html>
