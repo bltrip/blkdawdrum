@@ -1131,7 +1131,7 @@ tg.saveFragment.onshow = function () {
     
     omg.server.post(json, function (response) {
         if (response.id) {
-            var savedUrl = location.origin + "/play/" + response.id;
+            var savedUrl = location.origin + "../play/" + response.id;
             tg.saveFragment.urlInput.value = savedUrl;
             tg.saveFragment.urlLink.href = savedUrl;        
             tg.saveFragment.onSave(response);
