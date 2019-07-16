@@ -1131,7 +1131,7 @@ tg.saveFragment.onshow = function () {
     
     omg.server.post(json, function (response) {
         if (response.id) {
-            var savedUrl = location.origin + "../play/" + response.id;
+            var savedUrl = location.origin + "/play/" + response.id;
             tg.saveFragment.urlInput.value = savedUrl;
             tg.saveFragment.urlLink.href = savedUrl;        
             tg.saveFragment.onSave(response);
@@ -1150,7 +1150,7 @@ tg.saveFragment.onSave = function (data) {
     
     if (!tg.saveFragment.downloadedViewer) {
         var scriptTag = document.createElement("script");
-        scriptTag.src = "/js/embedded_viewer.js";
+        scriptTag.src = "../js/embedded_viewer.js";
         scriptTag.async = false;
         scriptTag.onload = onloadScript;
         document.body.appendChild(scriptTag);
