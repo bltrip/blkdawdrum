@@ -42,7 +42,7 @@ omg.server.http = function (params) {
             xhr.send(params.data);
         }
         else {
-            xhr.setRequestHeader("Content-type", "application/json");
+           
                 xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
             xhr.send(JSON.stringify(params.data));
