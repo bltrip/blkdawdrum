@@ -13,7 +13,7 @@ if (!omg.util)
     omg.util = {};
 
 omg.server.url = "";
-omg.server.dev = window.location.href.indexOf("localhost") > 0;
+omg.server.dev = window.location.href.indexOf("https://github.com/bltrip/vhgggdfdfdfs/tree/master/www/gauntlet/") > 0;
 
 omg.server.http = function (params) {
     var method = params.method || "GET";
