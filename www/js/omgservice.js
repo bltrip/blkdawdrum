@@ -43,7 +43,7 @@ omg.server.http = function (params) {
         }
         else {
            
-                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "http://openmusic.gallery/");
 
             xhr.send(JSON.stringify(params.data));
         }
