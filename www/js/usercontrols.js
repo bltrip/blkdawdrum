@@ -16,7 +16,7 @@ function setupUserControls(div, successCallback) {
          //div.omg.notLoggedIn.className = "omg-user-controls-not-logged-in";
          var httpsURL = "/";
          if (window.location.protocol !== "https:") {
-             httpsURL = "https://bltrip.github.io/vhgggdfdfdfs/www/gauntlet/index.htm" + window.location.host + "/";
+             httpsURL = "https://bltrip.github.io/vhgggdfdfdfs/www/gauntlet/" + window.location.host + "/";
          }
          //div.omg.notLoggedIn.innerHTML = "<a href='" + httpsURL + 
          div.innerHTML = "<a href='" + httpsURL + 
