@@ -12,7 +12,7 @@ if (!omg.server)
 if (!omg.util)
     omg.util = {};
 
-omg.server.url = "";
+omg.server.url = "https://github.com/bltrip/vhgggdfdfdfs/tree/master/www/gauntlet/";
 omg.server.dev = window.location.href.indexOf("https://github.com/bltrip/vhgggdfdfdfs/tree/master/www/gauntlet/") > 0;
 
 omg.server.http = function (params) {
